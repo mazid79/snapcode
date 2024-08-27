@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   background: linear-gradient(177.9deg, rgb(255, 228, 254) 5.3%, rgb(255, 228, 254) 5.3%, rgb(188, 132, 173) 94.7%);
-  color: #F403E7;
+  color: #fff;
   font-family: 'Inter';
 }
 
