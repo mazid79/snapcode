@@ -3,20 +3,26 @@
 @tailwind utilities;
 
 body {
-  background-color: #0d0d0d;
-  color: #848484;
+  background: linear-gradient(177.9deg, rgb(255, 228, 254) 5.3%, rgb(255, 228, 254) 5.3%, rgb(188, 132, 173) 94.7%);
+  color: #F403E7;
+  font-family: 'Inter';
 }
 
 .code-title {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
   border: 2px solid rgba(249, 249, 249, 0.08);
-
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem;
 }
 
 .ace-editor-container {
   width: 100% !important;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .ace_scrollbar {
@@ -24,18 +30,20 @@ body {
 }
 
 .ace_editor {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
-
-  border: 2px solid rgba(249, 249, 249, 0.08);
-  border-top: none;
-
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   font-weight: 500 !important;
   font-size: 17px !important;
   line-height: 1.5rem !important;
+  transition: all 0.3s ease;
 }
+
+.ace_editor:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
 
 .ace_content {
   width: 100% !important;
@@ -52,7 +60,6 @@ body {
   height: 37px;
   border-radius: 3px;
   border: 1px solid rgba(249, 249, 249, 0.08);
-
   font-size: 0.9rem;
   display: flex;
   align-items: center;
@@ -70,8 +77,12 @@ body {
 }
 
 .handle {
-  transition: all 0.4s ease-in-out;
-  pointer-events: none;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+}
+
+.handle:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .handle-top,

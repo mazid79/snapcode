@@ -60,8 +60,8 @@ export default function Home() {
   return (
     <main className=" h-[100vh] flex flex-col items-center justify-between">
       <header
-        className="mt-6 flex gap-6 w-[940px] p-5 fixed top-0 left-1/2 translate-x-[-50%]
-         z-10 bg-[#191919] rounded border border-[#3C3C3C] shadow-md"
+          className="mt-6 flex gap-6 w-[940px] p-5 fixed top-0 left-1/2 translate-x-[-50%]
+          z-10 bg-[#313032] rounded-xl border border-[#9F979F] shadow-lg backdrop-filter backdrop-blur-lg"
       >
         <LanguageSelector
           language={language}
@@ -84,9 +84,9 @@ export default function Home() {
 
         <div className="export-btn self-center ml-auto">
           <button
-            className="flex items-center gap-3 py-2 px-3 bg-blue-400 rounded-md text-sm text-blue-400 
-              font-medium bg-opacity-10 hover:bg-opacity-80 hover:text-slate-50 ease-in-out transition-all 
-              duration-300"
+            className="flex items-center gap-3 py-2 px-3 rounded-md text-sm font-medium 
+          bg-blue-400 bg-opacity-10 text-slate-400 hover:bg-pink-500 hover:bg-opacity-80 
+          hover:text-white transition-all duration-300 ease-in-out"
             onClick={exportPng}
           >
             <Download />

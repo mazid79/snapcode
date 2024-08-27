@@ -74,26 +74,31 @@ function CodeEditor({
   }, []);
 
   return (
-    <Resizable
-      minHeight={466}
-      minWidth={510}
-      maxWidth={1000}
-      defaultSize={{
-        width: width,
-        height: height || 500,
-      }}
-      onResize={handleResize}
-      className="resize-container relative"
-      style={{
-        background: background,
-      }}
-    >
-      <div
-        className="code-block"
+      <Resizable
+        minHeight={466}
+        minWidth={510}
+        maxWidth={1000}
+        defaultSize={{
+          width: width,
+          height: height || 500,
+        }}
+        onResize={handleResize}
+        className="resize-container relative"
         style={{
-          padding: currentPadding,
+          background: background,
+          borderRadius: '0.75rem',
+          overflow: 'hidden',
+          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.3)',
+          transition: 'box-shadow 0.3s ease-in-out',
         }}
       >
+        <div
+          className="code-block"
+          style={{
+            padding: currentPadding,
+            transition: 'all 0.3s ease',
+          }}
+        >
         <div
           className="handle handle-top absolute left-1/2 translate-x-[-50%] top-[-4px] w-2 h-2 
             rounded-full bg-slate-300 hover:bg-slate-50"
